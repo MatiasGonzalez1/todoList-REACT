@@ -27,3 +27,8 @@
   font-size: 23px;
   margin: 5px;
 }
+
+.tarea-contenedor.completada{
+  background-color: #1b1b3261;
+  text-decoration: line-through;
+}
