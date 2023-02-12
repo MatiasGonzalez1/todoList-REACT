@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './tarea.css';
+import {MdDeleteOutline} from 'react-icons/md';
 
 const Tarea = ({texto}) => {
   return (
@@ -7,10 +9,10 @@ const Tarea = ({texto}) => {
         {texto}
       </div>
       <div className='tarea-icono'>
-        Eliminar
+        <MdDeleteOutline/>
       </div>
     </div>
-  )
+  );
 }
 
-export default Tarea
+export default Tarea;
