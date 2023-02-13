@@ -7,12 +7,14 @@ const ListaDeTareas = () => {
 
   const [tareas, setTareas] = useState([]); 
   const agregarTarea = tarea =>{
-    console.log('Tarea agregada');
-    console.log(tarea);
+    if(tarea.texto.trim()){
+      tarea.texto = tarea.texto.trim();
+      const tareasActualizadas = [tarea, ...tareas];
+    }
   }
   return (
     <>
-    <Formulario/>
+    <Formulario onSubmit={agregarTarea}/>
     <div className='lista-contenedor'>
       {
         tareas.map((tarea) =>

@@ -12,10 +12,14 @@ const Formulario = (props) => {
   }
 
   const manejarEnvio = e =>{
+    const time = new Date();
+    const h = time.getHours();
+    const m = time.getMinutes();
     e.preventDefault();
     const tareaNueva = {
       id: uuidv4(),
       texto: input,
+      time: `${h}:${m}`,
       completada: false
     }
     props.onSubmit(tareaNueva);
